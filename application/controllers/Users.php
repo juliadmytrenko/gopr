@@ -13,12 +13,33 @@ class Users extends CI_Controller {
 			$this->load->view('templates/footer');
 		} else {
 
+			// Pobierz nazwę użytkownika (login)
+			$login = $this->input->post('login');
+			// Pobierz zaszyfrowane hasło
+//			$password = md5($this->input->post('password'));
+			// tymczasowo bez szyfrowania hasła
+			$haslo = $this->input->post('haslo');
+			// Zaloguj usera
+			$user_id = $this->user_model->login($login, $haslo);
 
+			if($user_id) {
+				// Stwórz sesje
+				$user_data = array(
+					'user_id' => $user_id,
+					'login' => $login,
+					'logged_in' => true
+				);
 
-			// Ustaw wiadomość
-			$this->session->set_flashdata('user_loggedin', 'Zalogowano.');
+				$this->session->set_userdata($user_data);
 
-			redirect('home');
+				// Ustaw wiadomość
+				$this->session->set_tempdata('user_loggedin', 'Zalogowano.', 1);
+				redirect('home');
+			} else {
+				// Ustaw wiadomość
+				$this->session->set_tempdata('login_failed', 'Błędne dane logowania.', 1);
+				redirect('users/login');
+			}
 		}
 	}
 
