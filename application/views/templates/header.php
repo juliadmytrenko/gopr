@@ -23,10 +23,22 @@
                     <li class="nav-item"><a href="<?php echo site_url(); ?>#rekrutacja" class="nav-link text-uppercase">Rekrutacja</a></li>
                     <li class="nav-item"><a href="<?php echo site_url(); ?>#kontakt" class="nav-link text-uppercase">Kontakt</a></li>
                 </ul>
-				<button class="btn btn-danger panelPracownika">
-					<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-						Zaloguj do Panelu Pracownika</a>
-				</button>
+				<div class="panelPracownika">
+
+					<?php if(!$this->session->userdata('logged_in')){ ?>
+						<button class="btn btn-danger">
+							<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
+								Zaloguj do Panelu Pracownika</a>
+						</button>
+					<?php }; ?>
+
+					<?php if($this->session->userdata('logged_in')){ ?>
+						<button class="btn btn-danger ml-1">
+							<a href="<?php echo site_url(); ?>users/logout" class="text-white text-uppercase " aria-hidden="true">
+								Wyloguj</a>
+						</button>
+					<?php }; ?>
+				</div>
             </div>
         </div>
     </nav>
@@ -35,10 +47,10 @@
 <!--Flash message -->
 	<?php if($this->session->tempdata('employee_created')){ ?>
 		<?php echo '<p class="alert alert-success">'.$this->session->tempdata('employee_created').'</p>'; ?>
-<!--	--><?php //endif; ?>
-	<?php } else if($this->session->tempdata('user_loggedin')){ ?>
+	<?php } if($this->session->tempdata('user_loggedin')){ ?>
 		<?php echo '<p class="alert alert-success">'.$this->session->tempdata('user_loggedin').'</p>'; ?>
-<!--	--><?php //endif; ?>
-	<?php }else if($this->session->tempdata('login_failed')): ?>
+	<?php } if($this->session->tempdata('login_failed')){ ?>
 		<?php echo '<p class="alert alert-danger">'.$this->session->tempdata('login_failed').'</p>'; ?>
-	<?php endif; ?>
+	<?php } if($this->session->tempdata('user_logout')){ ?>
+		<?php echo '<p class="alert alert-success">'.$this->session->tempdata('user_logout').'</p>'; ?>
+	<?php }; ?>

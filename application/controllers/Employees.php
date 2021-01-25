@@ -19,7 +19,7 @@
 				$this->employee_model->create();
 
 				// Ustaw wiadomość
-				$this->session->set_flashdata('employee_created', 'Utworzono nowego pracownika.');
+				$this->session->set_tempdata('employee_created', 'Utworzono nowego pracownika.');
 
 				redirect('home');
 			}

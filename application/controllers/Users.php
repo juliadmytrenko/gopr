@@ -43,4 +43,14 @@ class Users extends CI_Controller {
 		}
 	}
 
+	public function logout() {
+		// unset userdata
+		$this->session->unset_userdata('logged_in');
+		$this->session->unset_userdata('user_id');
+		$this->session->unset_userdata('login');
+
+		$this->session->set_tempdata('user_logout', 'Wylogowano.', 1);
+		redirect('users/login');
+	}
+
 }
