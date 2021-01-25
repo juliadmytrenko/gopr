@@ -13,7 +13,7 @@
 
 //				$data['latest_posts'] = $this->post_model->get_latest_posts();
 //				echo $this->post_model->test();
-				print_r ($this->post_model->get_pracownik());
+				//print_r ($this->post_model->get_pracownik());
 			}
 
 			$this->load->view('templates/header');

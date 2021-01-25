@@ -3,7 +3,7 @@
 		public function index() {
 			$data['title'] = "Najnowsze posty";
 
-			$data['posts'] = $this->post_model->get_posts();
+			//$data['posts'] = $this->post_model->get_posts();
 
 			$this->load->view('templates/header');
 			$this->load->view('posts/index', $data);
