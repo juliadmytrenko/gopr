@@ -42,6 +42,51 @@
             </div>
         </div>
     </nav>
+	<?php if($this->session->userdata('logged_in')){ ?>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark my-navbar">
+			<div class="container">
+				<div class="navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav">
+						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
+								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
+									<button class="btn btn-primary">
+										Zarządzaj jednostką
+									</button>
+								</a>
+						</li>
+						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
+								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
+									<button class="btn btn-primary">
+										Ratownicy
+									</button>
+								</a>
+						</li>
+						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
+								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
+									<button class="btn btn-primary">
+										Zagrożenia
+									</button>
+								</a>
+						</li>
+						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
+								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
+									<button class="btn btn-primary">
+										Raporty
+									</button>
+								</a>
+						</li>
+						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
+								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
+									<button class="btn btn-primary">
+										Grafik
+									</button>
+								</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	<?php }; ?>
 </header>
 <main>
 <!--Flash message -->
