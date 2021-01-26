@@ -21,7 +21,7 @@
 				echo "<tr>";
 				echo "<td>" . $index . "</td>";
 				echo "<td>" . $grafik['id'] . "</td>";
-				echo "<td>" . $grafik['data'] . "</td>";
+				echo "<td>" . date("F j, Y, g:i a", strtotime($grafik['data'])). "</td>";
 				echo "<td>" . $grafik['miejsce'] . "</td>";
 				echo "<td>" . $grafik['imie'] . "</td>";
 				echo "<td>" . $grafik['nazwisko'] . "</td>";
