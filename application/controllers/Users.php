@@ -31,7 +31,8 @@ class Users extends CI_Controller {
 					'logged_in' => true,
 					'stanowisko' => $pracownik['stanowisko'],
 					'imie' => $pracownik['imie'],
-					'nazwisko' => $pracownik['nazwisko']
+					'nazwisko' => $pracownik['nazwisko'],
+					'id_jednostki' => $pracownik['id_jednostki']
 				);
 
 				$this->session->set_userdata($user_data);

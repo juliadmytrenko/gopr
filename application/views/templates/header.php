@@ -26,10 +26,8 @@
 				<div class="panelPracownika">
 
 					<?php if(!$this->session->userdata('logged_in')){ ?>
-						<button class="btn btn-danger">
-							<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-								Zaloguj do Panelu Pracownika</a>
-						</button>
+						<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase btn btn-danger" aria-hidden="true">
+							Zaloguj do Panelu Pracownika</a>
 					<?php }; ?>
 
 					<?php if($this->session->userdata('logged_in')){ ?>
@@ -40,10 +38,8 @@
 								<span class="text-center h4"><?php echo $this->session->userdata('imie').' '.$this->session->userdata('nazwisko') ?></span>
 							</p>
 						</div>
-						<button class="btn btn-danger ml-1">
-							<a href="<?php echo site_url(); ?>users/logout" class="text-white text-uppercase " aria-hidden="true">
+							<a href="<?php echo site_url(); ?>users/logout" class="text-white text-uppercase btn btn-danger ml-1" aria-hidden="true">
 								Wyloguj</a>
-						</button>
 					<?php }; ?>
 				</div>
             </div>
@@ -55,38 +51,28 @@
 				<div class="navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mb-2">
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-secondary">
-										Zarządzaj jednostką
-									</button>
+								<a href="<?php echo site_url(); ?>jednostka" class="text-white btn btn-secondary " aria-hidden="true">
+									Zarządzaj jednostką
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>ratownicy" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-secondary">
-										Ratownicy
-									</button>
+								<a href="<?php echo site_url(); ?>ratownicy" class="text-white btn btn-secondary " aria-hidden="true">
+									Ratownicy
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-secondary">
-										Zagrożenia
-									</button>
+								<a href="<?php echo site_url(); ?>users/login" class="text-white btn btn-secondary" aria-hidden="true">
+									Zagrożenia
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-secondary">
-										Raporty
-									</button>
+								<a href="<?php echo site_url(); ?>users/login" class="text-white btn btn-secondary" aria-hidden="true">
+									Raporty
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-secondary">
-										Grafik
-									</button>
+								<a href="<?php echo site_url(); ?>users/login" class="text-white btn btn-secondary" aria-hidden="true">
+									Grafik
 								</a>
 						</li>
 					</ul>
