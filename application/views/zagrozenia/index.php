@@ -1,6 +1,6 @@
 <div class="container">
-	<div class="my-5 d-flex flex-wrap">
-		<div id="mapid" style="width: 600px; height: 400px;"></div>
+	<div class="my-5">
+		<div id="mapid" style="width: 100%; height: 500px;"></div>
 	</div>
 </div>
 
