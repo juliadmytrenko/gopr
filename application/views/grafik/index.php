@@ -16,21 +16,18 @@
 			echo "</tr>";
 			echo "</thead>";
 			echo "<tbody>";
+			$index = 1;
 			foreach ($grafiki as $grafik) {
 				echo "<tr>";
-				echo "<td>" . '' . "</td>";
+				echo "<td>" . $index . "</td>";
 				echo "<td>" . $grafik['id'] . "</td>";
 				echo "<td>" . $grafik['data'] . "</td>";
 				echo "<td>" . $grafik['miejsce'] . "</td>";
 				echo "<td>" . $grafik['imie'] . "</td>";
 				echo "<td>" . $grafik['nazwisko'] . "</td>";
 				echo "<td>" . $grafik['nr_telefonu'] . "</td>";
-//				echo "<td>";
-//				echo "<a href='read.php?id=". $grafik['id'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-//				echo "<a href='update.php?id=". $grafik['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-//				echo "<a href='delete.php?id=". $grafik['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-//				echo "</td>";
 				echo "</tr>";
+				$index++;
 			}
 			echo "</tbody>";
 			echo "</table>";
