@@ -11,7 +11,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-navbar">
         <div class="container">
-            <span class="navbar-brand h1">GOPR</span>
+            <h1 class="navbar-brand mr-5 logo">GOPR</h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -62,7 +62,7 @@
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
+								<a href="<?php echo site_url(); ?>ratownicy" class="text-white text-uppercase " aria-hidden="true">
 									<button class="btn btn-secondary">
 										Ratownicy
 									</button>

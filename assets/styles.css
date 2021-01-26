@@ -315,3 +315,9 @@ input[type=text]::placeholder, input[type=number]::placeholder, input[type=passw
 }
 
 /*snackbar end*/
+
+
+.logo {
+	font-size: 2.5rem;
+	line-height: 2rem;
+}
