@@ -4,6 +4,17 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/styles.css">
+<!--	to do mapki ze strony zagrozenia-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		  crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+			crossorigin=""></script>
+<!--koniec linkow do mapki-->
 
 	<title>GOPR</title>
 </head>
@@ -61,7 +72,7 @@
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>users/login" class="text-white btn btn-secondary" aria-hidden="true">
+								<a href="<?php echo site_url(); ?>zagrozenia/index" class="text-white btn btn-secondary" aria-hidden="true">
 									Zagrożenia
 								</a>
 						</li>
@@ -71,7 +82,7 @@
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>users/login" class="text-white btn btn-secondary" aria-hidden="true">
+								<a href="<?php echo site_url(); ?>grafik/index" class="text-white btn btn-secondary" aria-hidden="true">
 									Grafik
 								</a>
 						</li>
