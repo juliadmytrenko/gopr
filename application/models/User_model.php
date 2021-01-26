@@ -11,7 +11,10 @@ class User_model extends CI_Model {
 		$result = $this->db->get('loginy');
 
 		if($result->num_rows() == 1) {
-			return $result->row(0)->id_pracownika;
+			$id_pracownika = $result->row(0)->id_pracownika;
+			$pracownik = $this->employee_model->get_employee_data($id_pracownika);
+
+			return $pracownik;
 		} else {
 			return false;
 		}

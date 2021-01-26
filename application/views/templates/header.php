@@ -33,6 +33,13 @@
 					<?php }; ?>
 
 					<?php if($this->session->userdata('logged_in')){ ?>
+						<div>
+							<p class="text-white">
+								Zalogowano jako <?php echo $this->session->userdata('stanowisko') ?>
+								<br>
+								<span class="text-center h4"><?php echo $this->session->userdata('imie').' '.$this->session->userdata('nazwisko') ?></span>
+							</p>
+						</div>
 						<button class="btn btn-danger ml-1">
 							<a href="<?php echo site_url(); ?>users/logout" class="text-white text-uppercase " aria-hidden="true">
 								Wyloguj</a>
@@ -46,38 +53,38 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark my-navbar">
 			<div class="container">
 				<div class="navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav">
+					<ul class="navbar-nav mb-2">
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
 								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-primary">
+									<button class="btn btn-secondary">
 										Zarządzaj jednostką
 									</button>
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
 								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-primary">
+									<button class="btn btn-secondary">
 										Ratownicy
 									</button>
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
 								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-primary">
+									<button class="btn btn-secondary">
 										Zagrożenia
 									</button>
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
 								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-primary">
+									<button class="btn btn-secondary">
 										Raporty
 									</button>
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
 								<a href="<?php echo site_url(); ?>users/login" class="text-white text-uppercase " aria-hidden="true">
-									<button class="btn btn-primary">
+									<button class="btn btn-secondary">
 										Grafik
 									</button>
 								</a>

@@ -20,14 +20,18 @@ class Users extends CI_Controller {
 			// tymczasowo bez szyfrowania hasła
 			$haslo = $this->input->post('haslo');
 			// Zaloguj usera
-			$user_id = $this->user_model->login($login, $haslo);
+			$pracownik = $this->user_model->login($login, $haslo);
+			$user_id = $pracownik['id'];
 
 			if($user_id) {
 				// Stwórz sesje
 				$user_data = array(
 					'user_id' => $user_id,
 					'login' => $login,
-					'logged_in' => true
+					'logged_in' => true,
+					'stanowisko' => $pracownik['stanowisko'],
+					'imie' => $pracownik['imie'],
+					'nazwisko' => $pracownik['nazwisko']
 				);
 
 				$this->session->set_userdata($user_data);

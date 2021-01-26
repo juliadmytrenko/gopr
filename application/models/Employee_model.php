@@ -33,4 +33,9 @@
 
 			return empty($query->row_array());
 		}
+
+		public function get_employee_data($id) {
+			$query = $this->db->get_where('pracownicy', array('id' => $id));
+			return $query->row_array();
+		}
 	}
