@@ -8,7 +8,7 @@
 			echo "<th>Nr dyżuru</th>";
 			echo "<th>Data dyżuru</th>";
 			echo "<th>Miejsce dyżuru</th>";
-			echo "<th>Imię</th>";\
+			echo "<th>Imię</th>";
 			echo "<th>Nazwisko</th>";
 			echo "<th>Numer telefonu</th>";
 
