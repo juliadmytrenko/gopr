@@ -2,6 +2,11 @@
 class Zagrozenia extends CI_Controller {
 
 	public function index() {
+		// check login
+		if(!$this->session->userdata('logged_in')) {
+			redirect('users/login');
+		}
+
 		$data['title'] = 'Zagrozenia';
 
 //

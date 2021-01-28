@@ -10,4 +10,20 @@ class Jednostka_model extends CI_Model {
 //		$query = $this->db->get_where('pracownicy', array('id_jednostki' => $id_jednostki));
 		return $query->result_array();
 	}
+
+//	public function dodaj_do_jednostki($id_pracownika) {
+//
+//
+//		return $query->result_array();
+//	}
+
+	public function usun_z_jednostki($id_pracownika) {
+
+		$data = array(
+			'id_jednostki' => null
+		);
+
+		$this->db->where('id', $id_pracownika);
+		return $this->db->update('pracownicy', $data);
+	}
 }

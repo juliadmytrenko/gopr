@@ -2,6 +2,11 @@
 class Grafik extends CI_Controller {
 
 	public function index() {
+		// check login
+		if(!$this->session->userdata('logged_in')) {
+			redirect('users/login');
+		}
+
 		$data['title'] = 'Grafik';
 
 		$id_pracownika = $this->session->userdata('user_id');

@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['posts/(:any)'] = 'posts/view/$1';
 $route['ratownicy'] = 'ratownicy/index';
 $route['jednostka'] = 'jednostka/index';
+$route['jednostka/edytuj/(:any)'] = 'jednostka/edytuj/$1';
 $route['zagrozenia'] = 'zagrozenia/index';
 $route['grafik'] = 'grafik/index';
 $route['posts'] = 'posts/index';
