@@ -44,6 +44,6 @@ class Jednostka extends CI_Controller {
 //		$id_jednostki = $this->session->userdata('id_jednostki');
 
 		$this->jednostka_model->usun_z_jednostki($id_ratownika);
-		redirect('ratownicy/index');
+		redirect($_SERVER['HTTP_REFERER']);
 	}
 }
