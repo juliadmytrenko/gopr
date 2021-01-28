@@ -11,11 +11,16 @@ class Jednostka_model extends CI_Model {
 		return $query->result_array();
 	}
 
-//	public function dodaj_do_jednostki($id_pracownika) {
-//
-//
-//		return $query->result_array();
-//	}
+	public function dodaj_do_jednostki($id_jednostki, $id_pracownika) {
+
+
+		$data = array(
+			'id_jednostki' => $id_jednostki
+		);
+
+		$this->db->where('id', $id_pracownika);
+		return $this->db->update('pracownicy', $data);
+	}
 
 	public function usun_z_jednostki($id_pracownika) {
 
@@ -26,4 +31,5 @@ class Jednostka_model extends CI_Model {
 		$this->db->where('id', $id_pracownika);
 		return $this->db->update('pracownicy', $data);
 	}
+
 }
