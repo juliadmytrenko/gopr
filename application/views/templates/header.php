@@ -72,17 +72,17 @@
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>zagrozenia/index" class="text-white btn btn-secondary" aria-hidden="true">
+								<a href="<?php echo site_url(); ?>zagrozenia" class="text-white btn btn-secondary" aria-hidden="true">
 									Zagrożenia
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>users/login" class="text-white btn btn-secondary" aria-hidden="true">
+								<a href="<?php echo site_url(); ?>raporty" class="text-white btn btn-secondary" aria-hidden="true">
 									Raporty
 								</a>
 						</li>
 						<li class="nav-item mr-2"><a href="<?php echo site_url(); ?>#strona-glowna" class="nav-link text-uppercase">
-								<a href="<?php echo site_url(); ?>grafik/index" class="text-white btn btn-secondary" aria-hidden="true">
+								<a href="<?php echo site_url(); ?>grafik" class="text-white btn btn-secondary" aria-hidden="true">
 									Grafik
 								</a>
 						</li>
