@@ -19,6 +19,8 @@
 
 				<h2> wieje strasznie</h2>
 				<!-- Tu trzeba będzie z bazy pobrać -->
+				<?php $this->load->view('zagrozenia/index.php', $zagrozenia);?>
+<!--				$this->load->view('pages/'.$page, $data);-->
 				<br><br>
 			</blochquote>
 		</div>

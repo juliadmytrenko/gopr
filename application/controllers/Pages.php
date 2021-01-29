@@ -14,6 +14,7 @@
 //				$data['latest_posts'] = $this->post_model->get_latest_posts();
 //				echo $this->post_model->test();
 				//print_r ($this->post_model->get_pracownik());
+				$data['zagrozenia'] = $this->zagrozenie_model->get_zagrozenia();
 			}
 
 			$this->load->view('templates/header');
