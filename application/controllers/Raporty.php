@@ -35,7 +35,7 @@ class Raporty extends CI_Controller {
 		}
 
 		$this->form_validation->set_rules('tytul', 'Login', 'required');
-		$this->form_validation->set_rules('date', 'Data', 'required');
+		$this->form_validation->set_rules('data_raportu', 'Data', 'required');
 		$this->form_validation->set_rules('tresc', 'Treść', 'required');
 
 		// dalej formularz. Dodawanie raportu
@@ -50,10 +50,12 @@ class Raporty extends CI_Controller {
 		} else {
 
 			$tytul = $this->input->post('tytul');
-			$data = $this->input->post('date');
+			$data = $this->input->post('data_raportu');
 			$tresc = $this->input->post('tresc');
 
-			$this->raport_model->dodaj($tytul, $data, $tresc);
+//			die($data);
+			$this->raport_model->dodaj_raport($tytul, $data, $tresc);
+			redirect('raporty');
 		}
 
 	}

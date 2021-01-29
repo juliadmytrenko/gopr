@@ -12,11 +12,14 @@ class Raport_model extends CI_Model {
 		return $query->row_array();
 	}
 
-	public function dodaj_raport() {
-		//$query = $this->db->get('raporty');
-		// dodawanie do bazy
+	public function dodaj_raport($tytul, $data, $tresc) {
+		$data = array(
+			'tytul' => $tytul,
+			'data' => $data,
+			'tresc' => $tresc,
+		);
 
-		return $query->result_array();
+		return $this->db->insert('raporty', $data);
 	}
 
 }
