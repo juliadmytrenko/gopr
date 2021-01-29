@@ -1,6 +1,9 @@
 <?php
 class User_model extends CI_Model {
-
+	// w pierwszym wczytywanym modelu musi byc konstruktor
+	public  function __construct() {
+		$this->load->database();
+	}
 
 	public function login($login, $haslo) {
 		// Walidacja
