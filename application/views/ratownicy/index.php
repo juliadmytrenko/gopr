@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="my-5 d-flex flex-wrap">
+	<div class="my-5 d-flex flex-wrap align-items-stretch">
 		<?php
 		include "./application/views/components/ratownik_tile.component.php";
 		//			echo json_encode($posts);
